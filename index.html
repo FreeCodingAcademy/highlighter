@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+        body{
+            font-family: sans-serif;
+        }
+        .video{
+            width: 100%;
+            text-align: center;
+        }
+        .video iframe{
+            width: 97%;
+            height: auto;
+        }
+        .video h1{
+            font-size: 20px;
+            margin: 10px 0;
+            color: #4f4f4f;
+            font-weight: 700;
+        }
+        .source-codes{
+            width: 97%;
+            text-align: left;
+            margin: 30px auto;
+        }
+        .source-codes h2{
+            font-size: 15px;
+            color: #4f4f4f;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+        }
+        #html , #css ,#js{
+            width: 95%;
+            padding: 10px;
+            background-color: aliceblue;
+            border: 1px solid #beced6;
+            overflow-x: scroll;
+            margin: 10px auto;
+            font-size: 13px;
+        }
+        .source-codes h3{
+            color: #4f4f4f;
+            font-size: 14px;
+            padding-left: 15px;
+        }
+    </style>
+</head>
+<body>
+    <br>
+    <div class="video">
+        <iframe src="https://www.youtube.com/embed/GjhgA2j" frameborder="0"></iframe>
+        <br>
+        <h1>Custom Checkbox Using HTML & CSS | Web Design Tutorials | CodingAcademy</h1>
+    </div>
+    <div class="source-codes">
+        <h2>Source Codes</h2>
+        <h3>HTML</h3>
+        <pre id="html">
+&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+    &lt;title>Custom Checkbox | CodingAcademy&lt;/title>
+    &lt;link rel="stylesheet" href="style.css">
+&lt;/head>
+&lt;body>
+    &lt;div class="container">
+        &lt;input type="checkbox" id="checkbox">
+        &lt;label for="checkbox">
+            &lt;div class="btn">
+                &lt;div>&lt;/div>
+            &lt;/div>
+        &lt;/label>
+    &lt;/div>
+&lt;/body>
+&lt;/html>
+        </pre>
+        <h3>CSS</h3>
+        <pre id="css">
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: aliceblue;
+}
+.container{
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50% , 50%);
+}
+.container .btn{
+    width: 100px;
+    height: 40px;
+    background-color: #adadad;
+    border-radius: 45px;
+    transition: all .3s;
+}
+.container .btn div{
+    width: 60px;
+    height: 60px;
+    background: #767676;
+    border-radius: 50%;
+    box-shadow: 0 0 21px 1px #9f9f9f;
+    position: absolute;
+    left: 15%;
+    bottom: 50%;
+    transform: translate(-50% , 50%);
+    transition: all .3s;
+}
+#checkbox:checked ~ label .btn{
+    background-color: #97c5f9;
+}
+#checkbox:checked ~ label .btn div{
+    background-color: #0076ff;
+    box-shadow: 0 2px 20px 1px rgba(0, 0, 0, 0.2);
+    left: 85%;
+}
+#checkbox{
+    display: none;
+}
+        </pre>
+        <h3 style="display:none" >JavaScript</h3>
+        <pre style="display:none" id="js">
+console.log("hello world");
+        </pre>
+    </div>
+    <script src="html.js"></script>
+    <script src="css.js"></script>
+    <script src="javascript.js"></script>
+</body>
+</html>
